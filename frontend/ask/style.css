@@ -1,0 +1,23 @@
+.container {
+    width: 500px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#answer {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
