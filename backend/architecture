@@ -1,23 +1,54 @@
 ── backend
    ├── config
+   │   ├── database.js             // Database configuration
+   │   
    ├── controllers
+   │   ├── authController.js // Handles signup, login, and authentication logic
+   │   ├── questionController.js // Handles  Question
+   │   └── userController.js  // Handles 'Ask' page operations
    ├── middlewares
+   │   ├── authMiddleware.js // Middleware for authenticating JWT tokens
    ├── models
+   │   ├── User.js           // User model
+   │   └── question.js            // Ask model
    ├── routes
+   │   ├── authRoutes.js     // Routes for authentication (signup, login)
+   │   ├── userRoutes.js     // Routes for user-related operations
+   │   └── questionRoutes.js      // Routes for 'Qustion' page operations
    ├── services
-   ├── server.js
-   ├── test1.js //  for my testing
-   ├── .env
-├── frontend
+   │   ├── aiService.js    // Handle OpenAi Services
+  
+   ├── server.js             // Entry point of the backend application
+   ├── test1.js              // For my testing
+   ├── .env                  // Environment variables
+── frontend
    ├── signup
-   │   ├── index.html
-   │   ├── style.css
-   │   └── script.js
+   │   ├── index.html        // Signup page
+   │   ├── style.css         // Signup page styles
+   │   └── script.js         // Signup page scripts
    ├── login
-   │   ├── index.html
-   │   ├── style.css
-   │   └── script.js
+   │   ├── index.html        // Login page
+   │   ├── style.css         // Login page styles
+   │   └── script.js         // Login page scripts
    ├── ask
-   │   ├── index.html
-   │   ├── style.css
-   │   └── script.js
+   │   ├── index.html        // 'Ask' page
+   │   ├── style.css         // 'Ask' page styles
+   │   └── script.js         // 'Ask' page scripts
+
+
+
+
+
+USER ────── Web ────── API Gateway ────── Auth Service ────── MySQL Database
+                               │                   │
+                               │                   │
+                               │                   └──── Token JWT ─── Session Management
+                               │
+                               │
+                               └───── Microservices (REST) ────── MySQL Database
+                                           │
+                                           │
+                                           ├── User Service ──────────────── MySQL Database
+                                           │
+                                           ├── Question Service ───────────────── MySQL Database
+                                           
