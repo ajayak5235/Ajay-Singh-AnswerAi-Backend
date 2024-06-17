@@ -72,9 +72,29 @@ If your project requires a database Mysql,
 
 
 
+The API will be available at http://localhost:5000.
+
+Endpoints
+Auth
+POST /api/auth/login
+POST /api/auth/logout
+POST /api/auth/refresh
+Users
+POST /api/users
+GET /api/users/:userId
+Questions
+POST /api/questions
+GET /api/questions/:questionId
+GET /api/users/:userId/questions
+
+
 ## Testing
 
 To run the tests for the project, use the following command:
 
 ```bash
 npm test
+
+
+
+
