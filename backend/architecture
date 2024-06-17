@@ -1,18 +1,23 @@
-
-# Architecture Explanation
-
-**Scalable Infrastructure on AWS:**
-
-1. **EC2 Instances**: Run the application.
-2. **RDS (MySQL)**: Database service.
-3. **ELB (Elastic Load Balancer)**: Distributes traffic across multiple EC2 instances.
-4. **Auto Scaling Group**: Automatically adjusts the number of EC2 instances based on demand.
-5. **S3**: For static asset storage.
-6. **CloudFront**: CDN for caching and fast content delivery.
-7. **Redis**: For job queue management using ElastiCache.
-
-
-
-### Conclusion
-
-This implementation ensures a scalable, secure, and maintainable API with proper JWT authentication, seamless integration with AI services, Dockerization for easy deployment, and an architecture designed to handle high loads. The provided README ensures easy setup and understanding of the project.
+── backend
+   ├── config
+   ├── controllers
+   ├── middlewares
+   ├── models
+   ├── routes
+   ├── services
+   ├── server.js
+   ├── test1.js //  for my testing
+   ├── .env
+├── frontend
+   ├── signup
+   │   ├── index.html
+   │   ├── style.css
+   │   └── script.js
+   ├── login
+   │   ├── index.html
+   │   ├── style.css
+   │   └── script.js
+   ├── ask
+   │   ├── index.html
+   │   ├── style.css
+   │   └── script.js
